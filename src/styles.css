@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root { font-family: Manrope, Arial, sans-serif; color: #302827; background: #f8f5f1; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button { font: inherit; }
+
+.page { max-width: 1160px; margin: 0 auto; padding: 64px 28px 72px; }
+header { margin-bottom: 34px; }
+.eyebrow { margin: 0 0 12px; color: #9c6353; font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+h1 { max-width: 660px; margin: 0; font-size: clamp(2.2rem, 5vw, 4.2rem); line-height: 1.08; letter-spacing: -.055em; }
+.subtitle { margin: 17px 0 0; color: #796e69; font-size: 1.05rem; }
+
+.product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.product-card { overflow: hidden; border: 1px solid #eadfd8; border-radius: 24px; background: #fffdfb; box-shadow: 0 12px 36px rgba(74, 48, 37, .07); transition: transform .2s, box-shadow .2s; }
+.product-card:hover { transform: translateY(-5px); box-shadow: 0 18px 42px rgba(74, 48, 37, .12); }
+.product-image { height: 240px; padding: 24px; display: grid; place-items: center; }
+.product-image img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; pointer-events: none; filter: drop-shadow(0 13px 12px rgba(49, 42, 94, .18)); }
+.product-details { position: relative; z-index: 1; padding: 24px; background: #fffdfb; }
+h2 { margin: 0; font-size: 1.16rem; letter-spacing: -.03em; }
+.price { margin: 9px 0 22px; font-size: 1.42rem; font-weight: 800; letter-spacing: -.04em; }
+.card-footer { display: flex; align-items: center; gap: 10px; }
+button { flex: 1; border: 0; border-radius: 12px; padding: 13px 10px; color: white; background: #8f5548; font-weight: 700; cursor: pointer; transition: background .2s, transform .15s; }
+button:hover { background: #754237; }
+button:active { transform: scale(.98); }
+.remove-button { flex: 0 0 auto; background: #f1eae4; color: #725a50; }
+.remove-button:hover { background: #e6d8cf; }
+.remove-button:disabled { cursor: not-allowed; opacity: .5; }
+.remove-button:disabled:hover { background: #f1eae4; }
+.counter { display: grid; place-items: center; min-width: 47px; min-height: 47px; border-radius: 12px; background: #f1e5dc; color: #874d40; font-weight: 800; }
+.counter-label { margin: 13px 0 0; color: #87766e; font-size: .85rem; }
+
+@media (max-width: 800px) { .page { padding: 44px 20px; } .product-grid { grid-template-columns: 1fr; max-width: 480px; } .product-image { height: 220px; } }
